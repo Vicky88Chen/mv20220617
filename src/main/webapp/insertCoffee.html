@@ -14,6 +14,7 @@
             價格:<input type="text" id="price" value="30"/><br/>
 	<button onclick="query()">Query All</button>
 	<button onclick="update()">Update</button>
+	<button onclick="deleteCof()">Delete</button>
 	<button onclick="send()">Insert</button>
 
 	<div id="display">Return Text</div>
@@ -24,6 +25,9 @@
 			$("#display").html(data);
 		}
 		function query(){
+			   $.get("CoffeeListMapServlet",result);
+		} 
+		function deleteCof(){
 			   $.get("CoffeeListMapServlet",result);
 		} 
 		function update(){
