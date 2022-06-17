@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+    <script>
+        function f1() {
+            var arr1 = ["a", "b", "c", "d", "e"];
+            $.each(arr1, function () {
+                document.write(this+",");
+            });
+        }
+        function f2() {
+            var obj = { one:1, two:2, three:3, four:4, five:5 }; 
+            $.each(obj, function(key,val) { 
+                alert(key+":"+val); 
+            });             
+        }
+    </script>
+    <button onclick="f1()">1-DIM Array</button>
+    <button onclick="f2()">Array Obj</button>
+</body>
+</html>

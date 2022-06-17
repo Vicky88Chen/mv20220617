@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Shop</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+ <body bgcolor="white">
+
+
+<BR>
+Please enter item to add or remove:
+<br>
+Add Item:
+
+<SELECT  id="item">
+     <OPTION>Beavis & Butt-head Video collection
+     <OPTION>X-files movie
+     <OPTION>Twin peaks tapes
+     <OPTION>NIN CD
+	<OPTION>JSP Book
+	<OPTION>Concert tickets
+	<OPTION>Love life
+	<OPTION>Switch blade
+	<OPTION>Rex, Rugs & Rock n' Roll
+</SELECT>
+<br> <br>
+<INPUT TYPE="button"  value="add"  onclick="add()" >
+<INPUT TYPE="button"  value="remove"  onclick="remove()">
+<div id="div1"></div>
+ <script>
+           function result(data){
+        	   $("#div1").html(data);
+           }
+           function add(){
+        	   var p=$("#item").val();        	  
+        	   $.post("carts.jsp",{"item":p ,"submit":"add"},result);
+           }
+           function remove(){
+        	   var p=$("#item").val();        	  
+        	   $.post("carts.jsp",{"item":p ,"submit":"remove"},result);
+           }
+ 
+ </script>     
+
+</body>
+</html>
+
+
